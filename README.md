@@ -6,3 +6,4 @@ Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shi
 
 - **Hour 1**: Kickoff; Get my web app running on Tomcat, showing a perfect useless hello world page:)
 - **Hour 2**: Get first Servlet working
+- **Hour 3**: Let JSPs & Servlets interact
