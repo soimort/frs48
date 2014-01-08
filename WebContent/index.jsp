@@ -13,9 +13,22 @@
       Travel from: <input type="text" name="from"/>
       Travel to: <input type="text" name="to"/>
       <br/>
-      <button type="submit" name="search" value="search">
+      <button type="submit" name="query" value="search">
         Search Flights
       </button>
+      <br/>
+      <button type="submit" name="query" value="distance">
+        Distance
+      </button>
+      <br/>
+      <button type="submit" name="query" value="altitude">
+        Altitude
+      </button>
+      <br/>
+      <button type="submit" name="query" value="geography">
+        Geography
+      </button>
+      <br/>
     </form>
   </body>
 </html>

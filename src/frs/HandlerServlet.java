@@ -12,8 +12,17 @@ public class HandlerServlet extends HttpServlet {
         throws IOException, ServletException {
         PrintWriter out = response.getWriter();
 
-        if (request.getParameter("search") != null) {
+        if (request.getParameter("query").equals("search")) {
             this.getServletContext().getRequestDispatcher("/search").include(request, response);
+        } else if (request.getParameter("query").equals("distance")) {
+            // call servlet 2
+            out.println(request.getParameter("query"));
+        } else if (request.getParameter("query").equals("altitude")) {
+            // call servlet 3
+            out.println(request.getParameter("query"));
+        } else if (request.getParameter("query").equals("geography")) {
+            // call servlet 3
+            out.println(request.getParameter("query"));
         }
     }
 }
