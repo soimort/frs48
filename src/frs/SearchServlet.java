@@ -12,9 +12,8 @@ public class SearchServlet extends HttpServlet {
         throws IOException, ServletException {
         PrintWriter out = response.getWriter();
 
-        out.println("<B><BR>You are from: " + request.getParameter("from"));
-        out.println(", to: " + request.getParameter("to") + "</B>");
-
         this.getServletContext().getRequestDispatcher("/response.jsp").include(request, response);
+        out.println("<br/><b>You are from: " + request.getParameter("from"));
+        out.println(", to: " + request.getParameter("to") + "</b>");
     }
 }
