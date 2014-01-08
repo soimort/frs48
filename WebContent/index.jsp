@@ -7,5 +7,7 @@
   </head>
   <body>
     <h1>Flight Reservation System</h1>
+
+    <jsp:include page="/search"/>
   </body>
 </html>
