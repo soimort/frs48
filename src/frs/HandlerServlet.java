@@ -13,16 +13,21 @@ public class HandlerServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         if (request.getParameter("query").equals("search")) {
+            // Call SearchServlet (Servlet-1)
             this.getServletContext().getRequestDispatcher("/search").include(request, response);
+
         } else if (request.getParameter("query").equals("distance")) {
-            // call servlet 2
-            out.println(request.getParameter("query"));
+            // Call DistanceServlet (Servlet-2)
+            this.getServletContext().getRequestDispatcher("/distance").include(request, response);
+
         } else if (request.getParameter("query").equals("altitude")) {
-            // call servlet 3
-            out.println(request.getParameter("query"));
+            // Call CityInfoServlet (Servlet-3)
+            this.getServletContext().getRequestDispatcher("/cityinfo").include(request, response);
+
         } else if (request.getParameter("query").equals("geography")) {
-            // call servlet 3
-            out.println(request.getParameter("query"));
+            // Call CityInfoServlet (Servlet-3)
+            this.getServletContext().getRequestDispatcher("/cityinfo").include(request, response);
+
         }
     }
 }

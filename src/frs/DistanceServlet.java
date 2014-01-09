@@ -6,8 +6,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/search")
-public class SearchServlet extends HttpServlet {
+@WebServlet("/distance")
+public class DistanceServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws IOException, ServletException {
         PrintWriter out = response.getWriter();
