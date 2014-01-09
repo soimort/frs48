@@ -1,9 +1,9 @@
-package org.acme;
+package frs.beans;
 import javax.ejb.Stateless;
 
 @Stateless
 public class HelloBean implements Hello {
     public String sayHello() {
-        return "Hello world!";
+        return "Hello, I'm a bean!";
     }
 }

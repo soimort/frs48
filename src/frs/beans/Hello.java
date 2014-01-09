@@ -1,4 +1,4 @@
-package org.acme;
+package frs.beans;
 import javax.ejb.Remote;
 
 @Remote
