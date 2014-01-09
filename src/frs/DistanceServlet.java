@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 public class DistanceServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws IOException, ServletException {
+        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
         this.getServletContext().getRequestDispatcher("/response.jsp").include(request, response);

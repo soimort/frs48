@@ -17,6 +17,7 @@ import frs.beans.Hello;
 public class SearchServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws IOException, ServletException {
+        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
         this.getServletContext().getRequestDispatcher("/response.jsp").include(request, response);
@@ -28,10 +29,10 @@ public class SearchServlet extends HttpServlet {
             Properties props = new Properties();
             props.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
             Context ctx = new InitialContext(props);
-            Object ref = ctx.lookup("HelloBeanRemote");
-            Hello h = (Hello)PortableRemoteObject.narrow(ref, Hello.class);
+            Hello h = (Hello)ctx.lookup("HelloBeanRemote");
+
             String result = h.sayHello();
-            out.println(result);
+            out.println("<br/><b>" + result + "</b>");
         } catch (Exception e) {
             out.println(e);
         }

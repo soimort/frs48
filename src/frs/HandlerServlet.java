@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 public class HandlerServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws IOException, ServletException {
+        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
         if (request.getParameter("query").equals("search")) {
