@@ -17,3 +17,4 @@ Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shi
 - **Hour 22**: Stick with the TomEE standalone server
 - **Hour 23**: Try a hello world EJB
 - **Hour 24**: Let Servlets call EJBs
+- **Hour 25**: Just play
