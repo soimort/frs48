@@ -18,3 +18,5 @@ Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shi
 - **Hour 23**: Try a hello world EJB
 - **Hour 24**: Let Servlets call EJBs
 - **Hour 25**: Just play
+- **Hour 26~34**: Get more-than-enough sleep
+- **Hour 35~39**: Have dinner and take a shower
