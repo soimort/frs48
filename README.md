@@ -16,3 +16,4 @@ Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shi
 - **Hour 21**: Try the TomEE standalone server `apache-tomee-1.6.0-plus.tar.gz`
 - **Hour 22**: Stick with the TomEE standalone server
 - **Hour 23**: Try a hello world EJB
+- **Hour 24**: Let Servlets call EJBs
