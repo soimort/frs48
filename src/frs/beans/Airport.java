@@ -13,6 +13,7 @@ public class Airport {
 
     private String airportCode;
     private String airportName;
+    private String city;
     private double latitude;
     private double longitude;
     private double altitude;
@@ -61,6 +62,16 @@ public class Airport {
     // Getter for latitude
     public double getLatitude() {
         return latitude;
+    }
+
+    // Getter for city
+    public String getCity() {
+        return city;
+    }
+
+    // Setter for city
+    public void setCity(String city) {
+        this.city = city;
     }
 
     // Setter for latitude
