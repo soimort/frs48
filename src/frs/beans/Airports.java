@@ -7,6 +7,13 @@ import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 import java.util.List;
 
+/**
+ * @author Mort Yao <mort.yao@gmail.com>
+ * @version 0.1
+ * @since  2014-01-10
+ *
+ * Airports EJB.
+ */
 @Stateful
 public class Airports {
 
