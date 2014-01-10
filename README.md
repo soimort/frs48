@@ -32,3 +32,5 @@ at org.hibernate.engine.transaction.internal.jta.JtaStatusHelper.getStatus(JtaSt
 ```
 
 OpenJPA bundled with TomEE works pretty well for me. Will stick with that one. Hibernate is listed in the requirements but who cares. 48 hours have passed and I really want to get shit done.
+
+- **Hour 49**: Get OpenJPA hello world working
