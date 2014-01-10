@@ -36,6 +36,9 @@ public class HandlerServlet extends HttpServlet {
             // Call CityInfoServlet (Servlet-3)
             this.getServletContext().getRequestDispatcher("/cityinfo").include(request, response);
 
+        } else if (request.getParameter("query").equals("show")) {
+            // Call ShowServlet
+            this.getServletContext().getRequestDispatcher("/show").include(request, response);
         }
     }
 }
