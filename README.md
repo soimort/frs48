@@ -22,3 +22,4 @@ Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shi
 - **Hour 35~39**: Have dinner and take a shower
 - **Hour 40-41**: Just play
 - **Hour 42**: Design the 3-tier structure of the web app
+- **Hour 43~48**: Struggle with the Hibernate shit. Never get a luck.
