@@ -1,5 +1,7 @@
 package frs;
 
+import frs.beans.Search;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.*;
@@ -10,8 +12,6 @@ import java.util.Properties;
 import javax.naming.InitialContext;
 import javax.naming.Context;
 import javax.rmi.PortableRemoteObject;
-
-import frs.beans.Hello;
 
 @WebServlet("/search")
 public class SearchServlet extends HttpServlet {
@@ -29,9 +29,10 @@ public class SearchServlet extends HttpServlet {
             Properties props = new Properties();
             props.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
             Context ctx = new InitialContext(props);
-            Hello h = (Hello)ctx.lookup("HelloBeanRemote");
 
-            String result = h.sayHello();
+            Search search = (Search)ctx.lookup("SearchBeanRemote");
+
+            String result = search.getData();
             out.println("<br/><b>" + result + "</b>");
         } catch (Exception e) {
             out.println(e);
