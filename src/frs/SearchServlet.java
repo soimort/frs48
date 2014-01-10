@@ -2,7 +2,6 @@ package frs;
 
 import frs.beans.Search;
 
-import javax.ejb.embeddable.EJBContainer; //
 import java.util.List; //
 import frs.beans.*; //
 
@@ -40,19 +39,17 @@ public class SearchServlet extends HttpServlet {
             out.println("<br/><b>" + result + "</b>");
 
             final Properties p = new Properties();
-            p.put("movieDatabase", "new://Resource?type=DataSource");
-            p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
-            p.put("movieDatabase.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
+            p.put("airportDatabase", "new://Resource?type=DataSource");
+            p.put("airportDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
+            p.put("airportDatabase.JdbcUrl", "jdbc:hsqldb:mem:airport_db");
             final Context context = new InitialContext(p);
-            Movies movies = (Movies) context.lookup("java:global/frs/Movies");
-            movies.addMovie(new Movie("Beat Takeshi", "Outrage", 2010));
-            movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
-            movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
-            movies.addMovie(new Movie("Joel Coen", "The Big Lebowski", 1998));
-            List<Movie> list = movies.getMovies();
-            out.println("<br/><h2>" + list.get(0).getDirector() + "</h2>");
-            for (Movie movie : list)
-                movies.deleteMovie(movie);
+            Airports airports = (Airports)context.lookup("java:global/frs/Airports");
+            airports.addAirport(new Airport("GKA", "Goroka", "Goroka", -6.081689, 145.391881, 5282));
+            List<Airport> list = airports.getAirports();
+            out.println("<br/><h2>" + list.size() + "</h2>");
+            //out.println("<br/><h2>" + list.get(0).getCity() + "</h2>");
+            //for (Airport airport : list)
+            //    airports.deleteAirport(airport);
 
         } catch (Exception e) {
             e.printStackTrace(out);

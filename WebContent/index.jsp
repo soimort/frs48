@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +6,7 @@
   <body>
     <h1>Flight Reservation System</h1>
 
-    <!-- Forward processing to MainServlet -->
+    <!-- Forward processing to HandlerServlet -->
     <form action="handler" method="POST">
       Travel from: <input type="text" name="from"/>
       Travel to: <input type="text" name="to"/>
