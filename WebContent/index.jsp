@@ -9,7 +9,7 @@
     <!-- Forward processing to HandlerServlet -->
     <form action="handler" method="POST">
       Travel from: <input type="text" name="from"/>
-      Travel to: <input type="text" name="to"/>
+      to: <input type="text" name="to"/>
       <br/>
       <button type="submit" name="query" value="search">
         Search Flights
@@ -22,7 +22,6 @@
       <button type="submit" name="query" value="altitude">
         Altitude
       </button>
-      <br/>
       <button type="submit" name="query" value="geography">
         Geography
       </button>
