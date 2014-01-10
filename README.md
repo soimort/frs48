@@ -35,3 +35,4 @@ OpenJPA bundled with TomEE works pretty well for me. Will stick with that one. H
 
 - **Hour 49**: Get OpenJPA hello world working
 - **Hour 50**: Implement Airline, Airport & Route Entities
+- **Hour 51**: More JPA
