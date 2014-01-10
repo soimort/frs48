@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flight Reservation System: Response</title>
+    <title>Flight Reservation System</title>
   </head>
   <body>
-    <p><b>Today is <%= new java.util.Date() %>. Have a nice day!</b></p>
+    <h1>Flight Reservation System</h1>
+    <b><%= new java.util.Date() %></b>
   </body>
 </html>
