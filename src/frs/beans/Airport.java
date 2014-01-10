@@ -21,9 +21,10 @@ public class Airport {
     public Airport() {
     }
 
-    public Airport(String airportCode, String airportName, double latitude, double longitude, double altitude) {
+    public Airport(String airportCode, String airportName, String city, double latitude, double longitude, double altitude) {
         this.airportCode = airportCode;
         this.airportName = airportName;
+        this.city = city;
         this.latitude = latitude;
         this.longitude = longitude;
         this.altitude = altitude;
@@ -59,11 +60,6 @@ public class Airport {
         this.airportName = airportName;
     }
 
-    // Getter for latitude
-    public double getLatitude() {
-        return latitude;
-    }
-
     // Getter for city
     public String getCity() {
         return city;
@@ -72,6 +68,11 @@ public class Airport {
     // Setter for city
     public void setCity(String city) {
         this.city = city;
+    }
+
+    // Getter for latitude
+    public double getLatitude() {
+        return latitude;
     }
 
     // Setter for latitude
