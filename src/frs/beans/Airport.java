@@ -4,6 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * @author Mort Yao <mort.yao@gmail.com>
+ * @version 0.1
+ * @since  2014-01-10
+ *
+ * Airport Entity.
+ */
 @Entity
 public class Airport {
 
@@ -30,72 +37,72 @@ public class Airport {
         this.altitude = altitude;
     }
 
-    // Getter for id
+    // Getter for id.
     public long getId() {
         return id;
     }
 
-    // Setter for id
+    // Setter for id.
     public void setId(long id) {
         this.id = id;
     }
 
-    // Getter for airportCode
+    // Getter for airportCode.
     public String getAirportCode() {
         return airportCode;
     }
 
-    // Setter for airportCode
+    // Setter for airportCode.
     public void setAirportCode(String airportCode) {
         this.airportCode = airportCode;
     }
 
-    // Getter for airportName
+    // Getter for airportName.
     public String getAirportName() {
         return airportName;
     }
 
-    // Setter for airportName
+    // Setter for airportName.
     public void setAirportName(String airportName) {
         this.airportName = airportName;
     }
 
-    // Getter for city
+    // Getter for city.
     public String getCity() {
         return city;
     }
 
-    // Setter for city
+    // Setter for city.
     public void setCity(String city) {
         this.city = city;
     }
 
-    // Getter for latitude
+    // Getter for latitude.
     public double getLatitude() {
         return latitude;
     }
 
-    // Setter for latitude
+    // Setter for latitude.
     public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    // Getter for longitude
+    // Getter for longitude.
     public double getLongitude() {
         return longitude;
     }
 
-    // Setter for longitude
+    // Setter for longitude.
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
-    // Getter for altitude
+    // Getter for altitude.
     public double getAltitude() {
         return altitude;
     }
 
-    // Setter for altitude
+    // Setter for altitude.
     public void setAltitude(double altitude) {
         this.altitude = altitude;
     }
