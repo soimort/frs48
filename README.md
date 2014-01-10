@@ -37,3 +37,4 @@ OpenJPA bundled with TomEE works pretty well for me. Will stick with that one. H
 - **Hour 50**: Implement Airline, Airport & Route Entities
 - **Hour 51**: More JPA
 - **Hour 52**: Struggle with `javax.naming.NameNotFoundException`
+- **Hour 53**: Struggle with CSV parsing
