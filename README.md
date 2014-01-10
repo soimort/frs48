@@ -41,3 +41,4 @@ OpenJPA bundled with TomEE works pretty well for me. Will stick with that one. H
 - **Hour 54**: CSV parsing basically works
 - **Hour 55**: Continue with JPA
 - **Hour 56~60**: Get enough sleep
+- **Hour 61~64**: JNDI name lookup and Tomcat auto-deployment stop working and recover for no reason. Fuck off
