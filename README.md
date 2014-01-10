@@ -23,3 +23,12 @@ Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shi
 - **Hour 40-41**: Just play
 - **Hour 42**: Design the 3-tier structure of the web app
 - **Hour 43~48**: Struggle with the Hibernate shit. Never get a luck.
+
+OK I think now it's the time to give up on Hibernate. No matter what I do, it keeps throwing me a lot of shit like:
+
+```
+java.lang.NullPointerException
+at org.hibernate.engine.transaction.internal.jta.JtaStatusHelper.getStatus(JtaStatusHelper.java:76)
+```
+
+OpenJPA bundled with TomEE works pretty well for me. Will stick with that one. Hibernate is listed in the requirements but who cares. 48 hours have passed and I really want to get shit done.
