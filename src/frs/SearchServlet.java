@@ -2,6 +2,10 @@ package frs;
 
 import frs.beans.Search;
 
+import javax.ejb.embeddable.EJBContainer; //
+import java.util.List; //
+import frs.beans.*; //
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.*;
@@ -34,8 +38,24 @@ public class SearchServlet extends HttpServlet {
 
             String result = search.getData();
             out.println("<br/><b>" + result + "</b>");
+
+            final Properties p = new Properties();
+            p.put("movieDatabase", "new://Resource?type=DataSource");
+            p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
+            p.put("movieDatabase.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
+            final Context context = new InitialContext(p);
+            Movies movies = (Movies) context.lookup("java:global/frs/Movies");
+            movies.addMovie(new Movie("Beat Takeshi", "Outrage", 2010));
+            movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
+            movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
+            movies.addMovie(new Movie("Joel Coen", "The Big Lebowski", 1998));
+            List<Movie> list = movies.getMovies();
+            out.println("<br/><h2>" + list.get(0).getDirector() + "</h2>");
+            for (Movie movie : list)
+                movies.deleteMovie(movie);
+
         } catch (Exception e) {
-            out.println(e);
+            e.printStackTrace(out);
         }
     }
 }
