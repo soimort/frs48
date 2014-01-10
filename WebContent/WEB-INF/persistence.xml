@@ -3,8 +3,8 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
   <persistence-unit name="airline-unit">
-    <jta-data-source>airlineDatabase</jta-data-source>
-    <non-jta-data-source>airlineDatabaseUnmanaged</non-jta-data-source>
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
     <class>frs.beans.Airline</class>
 
     <properties>
@@ -13,8 +13,8 @@
   </persistence-unit>
 
   <persistence-unit name="airport-unit">
-    <jta-data-source>airportDatabase</jta-data-source>
-    <non-jta-data-source>airportDatabaseUnmanaged</non-jta-data-source>
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
     <class>frs.beans.Airport</class>
 
     <properties>
@@ -23,8 +23,8 @@
   </persistence-unit>
 
   <persistence-unit name="route-unit">
-    <jta-data-source>routeDatabase</jta-data-source>
-    <non-jta-data-source>routeDatabaseUnmanaged</non-jta-data-source>
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
     <class>frs.beans.Route</class>
 
     <properties>
