@@ -6,6 +6,13 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 
+/**
+ * @author Mort Yao <mort.yao@gmail.com>
+ * @version 0.1
+ * @since  2014-01-10
+ *
+ * Handler Servlet: handles all user requests and forwards them to corresponding Servlets.
+ */
 @WebServlet("/handler")
 public class HandlerServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
