@@ -8,8 +8,8 @@
 
     <!-- Forward processing to HandlerServlet -->
     <form action="handler" method="POST">
-      Travel from: <input type="text" name="from"/>
-      to: <input type="text" name="to"/>
+      Travel From: <input type="text" name="from"/>
+      To: <input type="text" name="to"/>
       <br/>
       <button type="submit" name="query" value="search">
         Search Flights
