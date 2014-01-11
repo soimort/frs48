@@ -31,7 +31,7 @@ public class DistanceServlet extends HttpServlet {
         this.getServletContext().getRequestDispatcher("/response.jsp").include(request, response);
 
         if (request.getParameter("query").equals("distance")) {
-            // Search
+            // Distance
             try {
                 String orig = request.getParameter("from");
                 String dest = request.getParameter("to");
