@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <head>
+    <title>Flight Reservation System - Admin</title>
+  </head>
+  <body>
+    <h1>Flight Reservation System</h1>
+    <h2>Administration</h2>
+
+    <!-- Forward processing to AdminServlet -->
+    <form action="admin" method="POST">
+      <b>Update the database:</b>
+      <button type="submit" name="operation" value="update">
+        Update
+      </button>
+      <br/>
+    </form>
+  </body>
+</html>
