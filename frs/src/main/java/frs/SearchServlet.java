@@ -58,11 +58,17 @@ public class SearchServlet extends HttpServlet {
                     out.println("to " + dest);
                     out.println("is available:</b>");
                     out.println("<br/>");
+                    out.println("<form action='confirm' method='POST'>");
                     for (Route route : routes) {
+                        out.println("<input type='radio' name='route' value='");
+                        out.println(route.getId() + "'>");
                         out.println("[" + route.getAirlineCode() + "] :");
                         out.println(route.getFromCode() + " -> " + route.getToCode());
+                        out.println("Price: " + route.getPrice());
                         out.println("<br/>");
                     }
+                    out.println("<br/><button type='submit' name='confirm' value='confirm'>Confirm</button>");
+                    out.println("</form>");
                 }
             } catch (Exception e) {
                 e.printStackTrace(out);
