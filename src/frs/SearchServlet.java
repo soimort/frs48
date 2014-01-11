@@ -18,7 +18,7 @@ import javax.servlet.annotation.WebServlet;
  * @version 0.1
  * @since  2014-01-11
  *
- * Search Servlet.
+ * Search Servlet: corresponds with Servlet-1 in specification.
  */
 @WebServlet("/search")
 public class SearchServlet extends HttpServlet {
