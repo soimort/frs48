@@ -47,4 +47,18 @@ public class Search {
         return routes;
     }
 
+    // Get all inbound routes.
+    public List<Route> getInboundRoutes(String airportCode) throws Exception {
+        Query routeQuery = routeEntityManager.createQuery("SELECT r FROM Route AS r WHERE r.toCode = '" + airportCode + "'");
+        List<Route> routes = routeQuery.getResultList();
+        return routes;
+    }
+
+    // Get all outbound routes.
+    public List<Route> getOutboundRoutes(String airportCode) throws Exception {
+        Query routeQuery = routeEntityManager.createQuery("SELECT r FROM Route AS r WHERE r.fromCode = '" + airportCode + "'");
+        List<Route> routes = routeQuery.getResultList();
+        return routes;
+    }
+
 }
