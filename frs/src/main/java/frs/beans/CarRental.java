@@ -1,0 +1,129 @@
+package frs.beans;
+
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+/**
+ * @author Mort Yao <mort.yao@gmail.com>
+ * @version 0.1
+ * @since  2014-01-11
+ *
+ * CarRental Entity.
+ */
+@Entity
+public class CarRental {
+
+    @Id
+    @GeneratedValue
+    private long id;
+
+    private String licenseNo;
+    private String driverName;
+    private String modelYear;
+    private double kilometers;
+    private int seatsNo;
+    private Date date;
+    private double payment;
+
+    public CarRental() {
+    }
+
+    public CarRental(String licenseNo,
+                     String driverName,
+                     String modelYear,
+                     double kilometers,
+                     int seatsNo,
+                     Date date,
+                     double payment) {
+        this.licenseNo = licenseNo;
+        this.driverName = driverName;
+        this.modelYear = modelYear;
+        this.kilometers = kilometers;
+        this.seatsNo = seatsNo;
+        this.date = date;
+        this.payment = payment;
+    }
+
+    // Getter for id.
+    public long getId() {
+        return id;
+    }
+
+    // Setter for id.
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    // Getter for licenseNo.
+    public String getLicenseNo() {
+        return licenseNo;
+    }
+
+    // Setter for licenseNo.
+    public void setLicenseNo(String licenseNo) {
+        this.licenseNo = licenseNo;
+    }
+
+    // Getter for driverName.
+    public String getDriverName() {
+        return driverName;
+    }
+
+    // Setter for driverName.
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
+
+    // Getter for modelYear.
+    public String getModelYear() {
+        return modelYear;
+    }
+
+    // Setter for modelYear.
+    public void setModelYear(String modelYear) {
+        this.modelYear = modelYear;
+    }
+
+    // Getter for kilometers.
+    public double getKilometers() {
+        return kilometers;
+    }
+
+    // Setter for kilometers.
+    public void setKilometers(double kilometers) {
+        this.kilometers = kilometers;
+    }
+
+    // Getter for seatsNo.
+    public int getSeatsNo() {
+        return seatsNo;
+    }
+
+    // Setter for seatsNo.
+    public void setSeatsNo(int seatsNo) {
+        this.seatsNo = seatsNo;
+    }
+
+    // Getter for date.
+    public Date getDate() {
+        return date;
+    }
+
+    // Setter for date.
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    // Getter for payment.
+    public double getPayment() {
+        return payment;
+    }
+
+    // Setter for payment.
+    public void setPayment(double payment) {
+        this.payment = payment;
+    }
+
+}
