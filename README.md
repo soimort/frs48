@@ -45,3 +45,4 @@ OpenJPA bundled with TomEE works pretty well for me. Will stick with that one. H
 - **Hour 65~68**: Finish all 3-tier components of Part I
 - **Hour 69**: Just play
 - **Hour 70~72**: Port existing code to JSF. Use Maven as the build manager
+- **Hour 73**: Start Part II
