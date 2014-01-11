@@ -48,7 +48,7 @@ public class DistanceServlet extends HttpServlet {
                 // Calculate distance between two cities
                 List<Double> distances = distance.calcDistance(orig, dest);
 
-                // Print all distances
+                // Print the distance
                 if (distances.size() == 0) {
                     out.println("<br/><b>City name not found.</b>");
                 } else {
