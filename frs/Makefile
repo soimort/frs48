@@ -1,6 +1,6 @@
 CATALINA_HOME := $(HOME)/Programs/apache-tomee-plus-1.6.0
 
-.PHONY: build jar deploy all
+.PHONY: build deploy all
 default: all
 
 build:
