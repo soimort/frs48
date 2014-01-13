@@ -7,20 +7,26 @@
   <h:head></h:head>
   <h:body>
     <f:view>
-      <h:outputLink id="navLink" value="register.jsf">
-        <h:outputText value="Sign up"/>
+      <h:outputLink id="navLink" value="login.jsf">
+        <h:outputText value="Sign in"/>
       </h:outputLink>
       <div id="divMain">
-        <h:outputLink id="titleLink" value="login.jsf">
-          <h:outputText value="Sign in"/>
+        <h:outputLink id="titleLink" value="register.jsf">
+          <h:outputText value="Sign up"/>
         </h:outputLink>
         <h:form>
           <h:panelGrid columns="2">
             <h:outputLabel for="userName" value="Username"/>
             <h:inputText id="userName" value="#{userBean.userName}"/>
+            <h:outputLabel for="email" value="Email"/>
+            <h:inputText id="email" value="#{userBean.email}"/>
+            <h:outputLabel for="country" value="Country"/>
+            <h:inputText id="country" value="#{userBean.country}"/>
             <h:outputLabel for="password" value="Password"/>
             <h:inputSecret id="password" value="#{userBean.password}"/>
-            <h:commandButton action="#{userBean.login}" value="Sign in"/>
+            <h:outputLabel for="repassword" value="Re-enter your password"/>
+            <h:inputSecret id="repassword"/>
+            <h:commandButton action="#{userBean.register}" value="Create Account"/>
           </h:panelGrid>
         </h:form>
       </div>
