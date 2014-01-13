@@ -14,14 +14,19 @@
         <h:outputLink id="titleLink" value="signin.jsf">
           <h:outputText value="Sign in"/>
         </h:outputLink>
-        <h:form>
+        <h:form id="formSignIn">
           <h:panelGrid columns="2">
             <h:outputLabel for="userName" value="Username"/>
-            <h:inputText id="userName" value="#{userSignIn.user.userName}"/>
+            <h:inputText id="userName" value="#{userBean.user.userName}" validatorMessage="Please enter your username">
+              <f:validateRequired/>
+            </h:inputText>
             <h:outputLabel for="password" value="Password"/>
-            <h:inputSecret id="password" value="#{userSignIn.user.password}"/>
-            <h:commandButton action="#{userSignIn.login}" value="Sign in"/>
+            <h:inputSecret id="password" value="#{userBean.user.password}" validatorMessage="Please enter your password">
+              <f:validateRequired/>
+            </h:inputSecret>
+            <h:commandButton action="#{userBean.login}" value="Sign in"/>
           </h:panelGrid>
+          <h:messages errorStyle="color:red"/>
         </h:form>
       </div>
     </f:view>
