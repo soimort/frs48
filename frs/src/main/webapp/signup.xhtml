@@ -7,26 +7,28 @@
   <h:head></h:head>
   <h:body>
     <f:view>
-      <h:outputLink id="navLink" value="login.jsf">
+      <h:outputLink id="navLink" value="signin.jsf">
         <h:outputText value="Sign in"/>
       </h:outputLink>
       <div id="divMain">
-        <h:outputLink id="titleLink" value="register.jsf">
+        <h:outputLink id="titleLink" value="signup.jsf">
           <h:outputText value="Sign up"/>
         </h:outputLink>
         <h:form>
           <h:panelGrid columns="2">
             <h:outputLabel for="userName" value="Username"/>
-            <h:inputText id="userName" value="#{userBean.userName}"/>
+            <h:inputText id="userName" value="#{userSignUp.user.userName}"/>
+            <h:outputLabel for="name" value="Name"/>
+            <h:inputText id="name" value="#{userSignUp.user.name}"/>
             <h:outputLabel for="email" value="Email"/>
-            <h:inputText id="email" value="#{userBean.email}"/>
+            <h:inputText id="email" value="#{userSignUp.user.email}"/>
             <h:outputLabel for="country" value="Country"/>
-            <h:inputText id="country" value="#{userBean.country}"/>
+            <h:inputText id="country" value="#{userSignUp.user.country}"/>
             <h:outputLabel for="password" value="Password"/>
-            <h:inputSecret id="password" value="#{userBean.password}"/>
+            <h:inputSecret id="password" value="#{userSignUp.user.password}"/>
             <h:outputLabel for="repassword" value="Re-enter your password"/>
             <h:inputSecret id="repassword"/>
-            <h:commandButton action="#{userBean.register}" value="Create Account"/>
+            <h:commandButton action="#{userSignUp.register}" value="Create Account"/>
           </h:panelGrid>
         </h:form>
       </div>

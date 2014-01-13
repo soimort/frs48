@@ -7,20 +7,20 @@
   <h:head></h:head>
   <h:body>
     <f:view>
-      <h:outputLink id="navLink" value="register.jsf">
+      <h:outputLink id="navLink" value="signup.jsf">
         <h:outputText value="Sign up"/>
       </h:outputLink>
       <div id="divMain">
-        <h:outputLink id="titleLink" value="login.jsf">
+        <h:outputLink id="titleLink" value="signin.jsf">
           <h:outputText value="Sign in"/>
         </h:outputLink>
         <h:form>
           <h:panelGrid columns="2">
             <h:outputLabel for="userName" value="Username"/>
-            <h:inputText id="userName" value="#{userBean.userName}"/>
+            <h:inputText id="userName" value="#{userSignIn.user.userName}"/>
             <h:outputLabel for="password" value="Password"/>
-            <h:inputSecret id="password" value="#{userBean.password}"/>
-            <h:commandButton action="#{userBean.login}" value="Sign in"/>
+            <h:inputSecret id="password" value="#{userSignIn.user.password}"/>
+            <h:commandButton action="#{userSignIn.login}" value="Sign in"/>
           </h:panelGrid>
         </h:form>
       </div>
