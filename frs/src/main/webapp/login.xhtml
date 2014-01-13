@@ -10,15 +10,20 @@
       <h:outputLink id="navLink" value="register">
         <h:outputText value="Sign up"/>
       </h:outputLink>
-      <h:form>
-        <h:panelGrid columns="2">
-          <h:outputLabel for="userName" value="Username"/>
-          <h:inputText id="userName" value="#{userBean.userName}"/>
-          <h:outputLabel for="password" value="Password"/>
-          <h:inputSecret id="password" value="#{userBean.password}"/>
-          <h:commandButton action="#{userBean.login}" value="Sign in"/>
-        </h:panelGrid>
-      </h:form>
+      <div id="divMain">
+        <h:outputLink id="titleLink" value="login">
+          <h:outputText value="Sign in"/>
+        </h:outputLink>
+        <h:form>
+          <h:panelGrid columns="2">
+            <h:outputLabel for="userName" value="Username"/>
+            <h:inputText id="userName" value="#{userBean.userName}"/>
+            <h:outputLabel for="password" value="Password"/>
+            <h:inputSecret id="password" value="#{userBean.password}"/>
+            <h:commandButton action="#{userBean.login}" value="Sign in"/>
+          </h:panelGrid>
+        </h:form>
+      </div>
     </f:view>
   </h:body>
 </html>
