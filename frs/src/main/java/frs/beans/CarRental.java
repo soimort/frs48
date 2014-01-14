@@ -4,15 +4,19 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 /**
  * @author Mort Yao <mort.yao@gmail.com>
- * @version 0.1
- * @since  2014-01-11
+ * @version 1.0
+ * @since  2014-01-14
  *
  * CarRental Entity.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "CarRental.getAll", query = "SELECT c FROM CarRental c")})
 public class CarRental {
 
     @Id
