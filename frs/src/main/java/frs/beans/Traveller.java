@@ -4,15 +4,19 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 /**
  * @author Mort Yao <mort.yao@gmail.com>
- * @version 0.1
- * @since  2014-01-11
+ * @version 1.0
+ * @since  2014-01-14
  *
  * Traveller Entity.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Traveller.getAll", query = "SELECT t FROM Traveller t")})
 public class Traveller {
 
     @Id
