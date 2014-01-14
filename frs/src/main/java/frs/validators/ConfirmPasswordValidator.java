@@ -1,4 +1,4 @@
-package jfs.validators;
+package frs.validators;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
