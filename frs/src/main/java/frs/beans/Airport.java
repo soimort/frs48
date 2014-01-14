@@ -3,15 +3,19 @@ package frs.beans;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 /**
  * @author Mort Yao <mort.yao@gmail.com>
- * @version 0.1
- * @since  2014-01-10
+ * @version 1.0
+ * @since  2014-01-14
  *
  * Airport Entity.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Airport.getAll", query = "SELECT a FROM Airport a")})
 public class Airport {
 
     @Id
