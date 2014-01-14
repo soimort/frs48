@@ -3,15 +3,19 @@ package frs.beans;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 /**
  * @author Mort Yao <mort.yao@gmail.com>
- * @version 0.1
- * @since  2014-01-11
+ * @version 1.0
+ * @since  2014-01-14
  *
  * Bank Entity.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Bank.getAll", query = "SELECT b FROM Bank b")})
 public class Bank {
 
     @Id
