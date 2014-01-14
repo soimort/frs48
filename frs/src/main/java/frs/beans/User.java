@@ -3,6 +3,8 @@ package frs.beans;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -14,6 +16,8 @@ import javax.validation.constraints.Size;
  * User Entity.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "User.getAll", query = "SELECT u FROM User u")})
 public class User {
 
     @Id
