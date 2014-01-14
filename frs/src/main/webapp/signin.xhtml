@@ -4,9 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
-  <f:metadata>
-    <f:viewParam name="msg" value="#{redirectMessage}" />
-</f:metadata>
   <h:head></h:head>
   <h:body>
     <f:view>
@@ -18,7 +15,7 @@
           <h:outputText value="Sign in"/>
         </h:outputLink>
         <p>
-          <h:outputText value="#{redirectMessage}"/>
+          <h:outputText value="#{userBean.message}"/>
         </p>
         <h:form id="formSignIn">
           <h:panelGrid columns="2">
