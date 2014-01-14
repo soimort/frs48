@@ -2,6 +2,46 @@
 
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
+  <persistence-unit name="user-unit">
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
+    <class>frs.beans.User</class>
+
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="bank-unit">
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
+    <class>frs.beans.Bank</class>
+
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="traveller-unit">
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
+    <class>frs.beans.Traveller</class>
+
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="carrental-unit">
+    <jta-data-source>frsDatabase</jta-data-source>
+    <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
+    <class>frs.beans.CarRental</class>
+
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+    </properties>
+  </persistence-unit>
+
   <persistence-unit name="airline-unit">
     <jta-data-source>frsDatabase</jta-data-source>
     <non-jta-data-source>frsDatabaseUnmanaged</non-jta-data-source>
