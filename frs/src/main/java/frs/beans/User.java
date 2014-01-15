@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 /**
  * @author Mort Yao <mort.yao@gmail.com>
  * @version 1.0
- * @since  2014-01-13
+ * @since  2014-01-15
  *
  * User Entity.
  */
@@ -29,6 +29,9 @@ public class User {
 
     @NotNull
     private String password;
+
+    @NotNull
+    private String idNo;
 
     private String name;
     private String email;
@@ -73,6 +76,16 @@ public class User {
     // Setter for password.
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    // Getter for idNo.
+    public String getIdNo() {
+        return idNo;
+    }
+
+    // Setter for idNo.
+    public void setIdNo(String idNo) {
+        this.idNo = idNo;
     }
 
     // Getter for name.
