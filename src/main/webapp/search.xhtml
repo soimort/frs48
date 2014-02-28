@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+    <title>Search - Flight Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="search.js"></script>
+  </h:head>
+  <h:body>
+    <f:view>
+      <h:outputLink id="navLink" value="signout.jsf">
+        <h:outputText value="#{userBean.user.userName} - Sign out"/>
+      </h:outputLink>
+      <div id="divMain">
+        <h:outputLink id="titleLink" value="index.jsf">
+          <h:outputText value="Results"/>
+        </h:outputLink>
+        <h:form id="formDisplay">
+          <h:outputText value="#{mainBean.message}"/>
+          <h:dataTable value="#{mainBean.routes}" var="route" border="1" cellspacing="2">
+            <h:column>
+              <f:facet name="header">
+                <h:outputText value=""/>
+              </f:facet>
+              <h:selectOneRadio valueChangeListener="#{mainBean.setSelectedRoute}" onclick="dataTableSelectOneRadio(this);">
+                <f:selectItem itemLabel="" itemValue="null"/>
+              </h:selectOneRadio>
+            </h:column>
+            <h:column>
+              <f:facet name="header">
+                <h:outputText value="Airline Code"/>
+              </f:facet>
+              <h:outputText value="#{route.airlineCode}"/>
+            </h:column>
+            <h:column>
+              <f:facet name="header">
+                <h:outputText value="From"/>
+              </f:facet>
+              <h:outputText value="#{route.fromCode}"/>
+            </h:column>
+            <h:column>
+              <f:facet name="header">
+                <h:outputText value="To"/>
+              </f:facet>
+              <h:outputText value="#{route.toCode}"/>
+            </h:column>
+            <h:column>
+              <f:facet name="header">
+                <h:outputText value="Price"/>
+              </f:facet>
+              <h:outputText value="#{route.price}"/>
+            </h:column>
+            <f:facet name="footer">
+              <h:outputText value="Total: #{mainBean.routes.size()} flights found."/>
+            </f:facet>
+          </h:dataTable>
+          <h:selectBooleanCheckbox id="hasCarRental" value="#{mainBean.hasCarRental}"/>
+          <h:outputLabel for="hasCarRental" value="Rent a car"/>
+          <br/>
+          <h:commandButton action="#{mainBean.book(userBean.user.idNo)}" value="Confirm Booking"/>
+          <h:commandButton action="index.xhtml" value="Cancel"/>
+        </h:form>
+        <h:messages errorStyle="color:red"/>
+      </div>
+    </f:view>
+  </h:body>
+</html>

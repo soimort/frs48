@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+    <title>Main Page - Flight Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </h:head>
+  <h:body>
+    <f:view>
+      <h:outputLink id="navLink" value="signout.jsf">
+        <h:outputText value="#{userBean.user.userName} - Sign out"/>
+      </h:outputLink>
+      <div id="divMain">
+        <h:outputLink id="titleLink" value="index.jsf">
+          <h:outputText value="Flight Reservation System"/>
+        </h:outputLink>
+        <p>
+          <h:outputText value="#{userBean.message}"/>
+        </p>
+        <h:form id="formIndex">
+          <h:panelGrid columns="4">
+            <h:outputLabel for="travelFrom" value="Travel From"/>
+            <h:inputText id="travelFrom" value="#{mainBean.travelFrom}"/>
+            <h:outputLabel for="travelTo" value="To"/>
+            <h:inputText id="travelTo" value="#{mainBean.travelTo}"/>
+          </h:panelGrid>
+          <h:commandButton action="#{mainBean.search}" value="Search Flights"/><br/>
+          <h:commandButton action="#{mainBean.distance}" value="Distance"/><br/>
+          <h:commandButton action="#{mainBean.altitude}" value="Altitude"/>
+          <h:commandButton action="#{mainBean.geography}" value="Geography"/>
+        </h:form>
+        <!-- Forward processing to HandlerServlet -->
+        <!-- form action="handler" method="POST">
+          Travel From: <input type="text" name="from"/>
+          To: <input type="text" name="to"/>
+          <br/>
+          <button type="submit" name="query" value="search">
+            Search Flights
+          </button>
+          <br/>
+          <button type="submit" name="query" value="distance">
+            Distance
+          </button>
+          <br/>
+          <button type="submit" name="query" value="altitude">
+            Altitude
+          </button>
+          <button type="submit" name="query" value="geography">
+            Geography
+          </button>
+          <br/>
+        </form -->
+        <h:messages errorStyle="color:red"/>
+        <h:outputLink id="altLink" value="index2.jsf">
+          <h:outputText value="Show Inbound/Outbound Flights"/>
+        </h:outputLink>
+      </div>
+    </f:view>
+  </h:body>
+</html>

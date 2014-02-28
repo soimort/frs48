@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+    <title>Confirm - Flight Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </h:head>
+  <h:body>
+    <f:view>
+      <h:outputLink id="navLink" value="signout.jsf">
+        <h:outputText value="#{userBean.user.userName} - Sign out"/>
+      </h:outputLink>
+      <div id="divMain">
+        <h:outputLink id="titleLink" value="index.jsf">
+          <h:outputText value="Confirmation"/>
+        </h:outputLink>
+        <h:form id="formDisplay">
+          <h:outputText value="#{mainBean.message}"/><br/>
+          <h:panelGrid columns="2" rendered="#{mainBean.hasCarRental == true}">
+            <h:outputLabel for="licenseNo" value="License Number"/>
+            <h:inputText id="licenseNo" value="#{mainBean.carRental.licenseNo}"/>
+            <h:outputLabel for="driverName" value="Driver Name"/>
+            <h:inputText id="driverName" value="#{mainBean.carRental.driverName}"/>
+            <h:outputLabel for="modelYear" value="Model Year"/>
+            <h:inputText id="modelYear" value="#{mainBean.carRental.modelYear}"/>
+            <h:outputLabel for="kilometers" value="Kilometers"/>
+            <h:inputText id="kilometers" value="#{mainBean.carRental.kilometers}"/>
+            <h:outputLabel for="seatsNo" value="seatsNo"/>
+            <h:inputText id="seatsNo" value="#{mainBean.carRental.seatsNo}"/>
+            <h:outputLabel for="days" value="days"/>
+            <h:inputText id="days" value="#{mainBean.carRental.days}"/>
+            <h:commandButton action="#{mainBean.rent(userBean.user.idNo)}" value="Rent it"/>
+          </h:panelGrid>
+          <h:messages errorStyle="color:red"/>
+        </h:form>
+      </div>
+    </f:view>
+  </h:body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    background-color: #CCFFCC;
+}
+
+#divMain {
+    background-color: #88FF88;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 80%;
+}
+
+#navLink {
+    position: fixed;
+    right: 0;
+    color: green;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+#titleLink {
+    color: black;
+    font-size: 4em;
+    text-decoration: none;
+}
+
+#altLink {
+    color: green;
+    text-decoration: none;
+}

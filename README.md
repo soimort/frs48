@@ -1,8 +1,14 @@
 # Flight Reservation System in 48 Hours
 
-Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shit done (as a course assignment).
+## Final Version
+
+![](http://i.imgur.com/VQQ5aOf.png)
+
+I decided to keep my final version here in case someday I will develop on Java EE again they might be helpful to myself. God knows. Maybe I won't!
 
 ## Log
+
+Flight Reservation System in 48 Hours, implemented in Java EE -- I gotta get shit done (as a course assignment).
 
 - **Hour 1**: Kickoff; Get my web app running on Tomcat, showing a perfect useless hello world page:)
 - **Hour 2**: Get first Servlet working

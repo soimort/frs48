@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+    <title>Display - Flight Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </h:head>
+  <h:body>
+    <f:view>
+      <h:outputLink id="navLink" value="signout.jsf">
+        <h:outputText value="#{userBean.user.userName} - Sign out"/>
+      </h:outputLink>
+      <div id="divMain">
+        <h:outputLink id="titleLink" value="index.jsf">
+          <h:outputText value="Results"/>
+        </h:outputLink>
+        <h:form id="formDisplay">
+          <p>
+            <h:outputText value="#{mainBean.message}"/>
+          </p>
+          <h:commandButton action="index.xhtml" value="Back"/>
+        </h:form>
+      </div>
+    </f:view>
+  </h:body>
+</html>

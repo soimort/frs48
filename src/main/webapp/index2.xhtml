@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+    <title>Main Page - Flight Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </h:head>
+  <h:body>
+    <f:view>
+      <h:outputLink id="navLink" value="signout.jsf">
+        <h:outputText value="#{userBean.user.userName} - Sign out"/>
+      </h:outputLink>
+      <div id="divMain">
+        <h:outputLink id="titleLink" value="index2.jsf">
+          <h:outputText value="Flight Reservation System"/>
+        </h:outputLink>
+        <p>
+          <h:outputText value="#{userBean.message}"/>
+        </p>
+        <h:form id="formIndex">
+          <h:panelGrid columns="4">
+            <h:outputLabel for="airportCode" value="Airport Code"/>
+            <h:inputText id="airportCode" value="#{mainBean.airportCode}" validatorMessage="Please enter the airport code">
+              <f:validateRequired/>
+            </h:inputText>
+            <h:selectOneRadio id="selection" value="#{mainBean.inOutBound}" validatorMessage="Please select inbound or outbound">
+              <f:validateRequired/>
+              <f:selectItem id="inbound" itemLabel="Inbound" itemValue="inbound"/>
+              <f:selectItem id="outbound" itemLabel="Outbound" itemValue="outbound"/>
+            </h:selectOneRadio>
+          </h:panelGrid>
+          <h:commandButton action="#{mainBean.display}" value="Display"/>
+        </h:form>
+        <!-- Forward processing to HandlerServlet -->
+        <!-- form action="handler" method="POST">
+          Airport Code: <input type="text" name="airportCode"/>
+          <select name="select">
+            <option value="inbound">Inbound</option>
+            <option value="outbound">Outbound</option>
+          </select>
+          <br/>
+          <b>Show All Inbound/Outbound Flights:</b>
+          <button type="submit" name="query" value="show">
+            Show
+          </button>
+        </form -->
+        <h:messages errorStyle="color:red"/>
+        <h:outputLink id="altLink" value="index.jsf">
+          <h:outputText value="Search Flights"/>
+        </h:outputLink>
+      </div>
+    </f:view>
+  </h:body>
+</html>
